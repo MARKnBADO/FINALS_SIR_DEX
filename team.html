@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hairstyle Tips Web blog</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <meta name="viewport" content="width=device-width, initial  -scale =1">  
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+    <section id="banner">
+    <img src="images/barbername.png" class="logo">
+        <div class="banner-text">
+            <h1>Meet Our Team</h1>
+            <p>Professionals</p>
+        </div>   
+    </section>
+    
+    
+    <!--SideBar-->
+    
+<div id="sideNav">
+    <nav>
+        <ul>
+            <li>
+                    <input type="text" id="search-bar" placeholder="Search...">
+            </li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#Footer">MEET US</a></li>
+        
+        </ul>
+    </nav>
+</div>   
+<div id="menuBtn">
+    <img src="images/menu-icon.png" id="menu">
+</div>  
+    
+    
+    
+    
+    <section id="tips">
+    <body id="main-content">
+   
+        <div class="title-text">
+        <p>Find Out</p>
+        <h1>Who's Behind Your Change!</h1>    
+        </div>
+      <main class="team">
+        <div class="row">
+            <div class="column">
+                <a href="https://www.facebook.com/albert.cabrera.733" target="_blank">
+                <img src="images/Albert.jpg" alt="" style="width: 50%">
+                </a>    
+                <h3>Albert Blue</h3>
+                <p>Barber</p>
+                <a href="https://www.facebook.com/yyyyaaaaaammmmmeeeetttteeeeeee" target="_blank">
+                <img src="images/kim.jpg" alt="" style="width: 50%">
+                </a>    
+                <h3>Kim Lee</h3>
+                <p>Head Barber</p>
+            </div>
+            <div class="column">
+                <a href="https://www.facebook.com/ivanharthart" target="_blank">
+                <img src="images/Ivan.jpg" alt="" style="width: 50%">
+                </a>
+                <h3>Ivan Co</h3>
+                <p>Barber</p>
+                <a href="https://www.facebook.com/profile.php?id=100025409841945" target="_blank">
+                <img src="images/PETE.jpg" alt="" style="width: 50%">
+                </a>
+                <h3>Aaron Pete</h3>
+                <p>Facilitator</p>
+            </div>
+            <div class="column">
+                <a href="https://www.facebook.com/profile.php?id=61558632736574" target="_blank">
+                <img src="images/carl.jpg" alt="" style="width: 50%">
+                </a>
+                <h3>Carl James </h3>
+                <p>Barber</p>
+                <a href="https://www.facebook.com/myra.agbanlog.77" target="_blank">
+                <img src="images/myra.jpg" alt="" style="width: 50%">
+                </a>
+                <h3>Myra Angela</h3>
+                <p>Owner & Manager  </p>
+            </div>
+        </div>
+    </main>
+   
+         <script> 
+        function searchFunction() {
+        var input = document.getElementById('search-bar').value.toLowerCase();
+        var content = document.getElementById('main-content');
+        var text = content.innerText.toLowerCase();
+        var regex = new RegExp('(' + input + ')', 'gi');
+        
+        content.innerHTML = content.innerHTML.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+        content.innerHTML = content.innerHTML.replace(regex, '<mark class="highlight">$1</mark>');
+    }
+
+    document.getElementById('search-bar').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            searchFunction();
+        }
+    });
+        </script>
+    </body>
+    </section>
+      
+
+    <!--FOOTER++++++++++++++++++++++++++++++++FOOTER-->  
+    
+<!--Footer-->
+    
+<section id="Footer">
+    <img src="images/barberman.png" class="footer-img"> 
+    <div class="title-text">
+    <p>CONTACT</p>
+    <h1>Visit Our Shop</h1>
+    </div>
+    <div class="footer-row">
+        <div class="footer-left">
+        <h1>Opening Hours</h1>
+            <p> <img src="images/clock.png"> Monday to Friday - 8am to 7pm </p>
+            <p> <img src="images/clock.png"> Saturday and Sunday- 8am to 11pm</p>
+        </div>
+        <div class="footer-right">
+        <h1>Get In Touch</h1>
+          <p>#3 Itag,Biringan City, Samar <img src="images/pinpoint.png"></p>
+          <p>@GentlemansCut.com <img src="images/paperplane.png"></p>
+          <p>09785481555/09425658741 <img src="images/telephone.png"></p> 
+        </div>
+    </div>
+    
+<div class="social-links">
+    <a href="https://www.facebook.com/GentlemanBarberShopp" target="_blank">
+        <img src="images/fblogo.png" alt="Facebook Icon">
+    </a>
+    <a href="https://www.instagram.com/gentleman_barbershp" target="_blank">
+        <img src="images/insta.png" alt="Instagram Icon">
+    </a>
+    <a href="https://twitter.com/gentbarber" target="_blank">
+        <img src="images/twiiter-icon.png" alt="Twitter Icon">
+    </a>
+    <a href="https://www.youtube.com/@RegalGentleman" target="_blank">
+        <img src="images/youtubelogo.png" alt="YouTube Icon">
+    </a>
+    <p>Copyright 2024 Gentleman's Cut.</p>
+    <p>All rights reserved. Privacy Policy</p>
+    <p>To God to be Glory</p>
+</div>
+    
+</section>
+
+<!--AnimationOFSidebar-->    
+<script>
+    var menuBtn = document.getElementById("menuBtn")
+    var sideNav = document.getElementById("sideNav")
+    var menu = document.getElementById("menu")
+
+    sideNav.style.right = "-250px";
+
+    menuBtn.onclick = function(){
+        if(sideNav.style.right == "-250px"){
+            sideNav.style.right = "0";
+            menu.src = "images/close.png";
+        }
+        else{
+            sideNav.style.right = "-250px";
+            menu.src = "images/menu-icon.png";
+        }
+    }
+    var scroll = new SmoothScroll('a[href*="#"]', {
+	    speed: 1000,
+	    speedAsDuration: true });
+</script>
+    
+
+</html>

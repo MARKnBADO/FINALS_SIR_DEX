@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hairstyle Tips Web blog</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <meta name="viewport" content="width=device-width, initial  -scale =1">  
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+    <section id="banner">
+    <img src="images/barbername.png" class="logo">
+        <div class="banner-text">
+            <h1>The Gentleman's Cut</h1>
+            <p>Where the Style meets Tradition</p>
+        </div>
+        
+    </section>
+    
+    <!--SideBar-->
+    
+<div id="sideNav">
+    <nav>
+        <ul>
+            <li>
+                    <input type="text" id="search-bar" placeholder="Search...">
+            </li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#Footer">MEET US</a></li>
+        
+        </ul>
+    </nav>
+</div>
+<div id="menuBtn">
+    <img src="images/menu-icon.png" id="menu">
+</div>  
+    
+    
+<section>
+    
+    <body id="main-content">
+     <main class="about">
+        <div class="about-header">
+            <h1>Read More About Us</h1>
+        </div>
+        <div class="about-content">
+            <p>Welcome, gentlemen, to our comprehensive guide on men's hair care! In the ever-evolving world of grooming, hair care stands as a cornerstone of personal style and confidence. Whether you're striving for a dapper professional look or a laid-back, casual vibe, knowing how to treat your hair is paramount. In this blog, we delve deep into the realm of men's hair care, offering expert advice, practical tips, and essential tricks to help you achieve and maintain the perfect hairstyle.</p>
+            <p>Why Hair Care Matters:
+Your hair is more than just strands on your head; it's a reflection of your personality, style, and overall well-being. A well-groomed hairstyle can enhance your appearance, boost your confidence, and leave a lasting impression. However, achieving the perfect look requires more than just a quick rinse and run. Effective hair care involves understanding your hair type, choosing the right products, mastering styling techniques, and maintaining regular grooming habits.</p>
+            <p>What You'll Find Here:
+In this blog, we'll cover everything you need to know to elevate your hair care game to the next level. From identifying your hair type to selecting the best products and mastering styling techniques, we've got you covered. Whether you're a grooming novice or a seasoned pro, you'll find valuable tips and insights to help you achieve your desired hairstyle with ease.</p>
+            <p>Our Approach:
+At Gentlemans Cut, we believe that hair care should be simple, effective, and tailored to your individual needs. We emphasize practicality and versatility, providing actionable advice that you can incorporate into your daily grooming routine. Our goal is to empower you to take control of your hair and unlock its full potential, whether you're rocking a classic crew cut or experimenting with trendy quiffs and fades.</p>
+        </div>
+    </main>
+       <script> 
+        function searchFunction() {
+        var input = document.getElementById('search-bar').value.toLowerCase();
+        var content = document.getElementById('main-content');
+        var text = content.innerText.toLowerCase();
+        var regex = new RegExp('(' + input + ')', 'gi');
+        
+        content.innerHTML = content.innerHTML.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+        content.innerHTML = content.innerHTML.replace(regex, '<mark class="highlight">$1</mark>');
+    }
+
+    document.getElementById('search-bar').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            searchFunction();
+        }
+    });
+        </script>
+</body>
+    
+</section>    
+     
+<!--Footer-->
+    
+<section id="Footer">
+    <img src="images/barberman.png" class="footer-img"> 
+    <div class="title-text">
+    <p>CONTACT</p>
+    <h1>Visit Our Shop</h1>
+    </div>
+    <div class="footer-row">
+        <div class="footer-left">
+        <h1>Opening Hours</h1>
+            <p> <img src="images/clock.png"> Monday to Friday - 8am to 7pm </p>
+            <p> <img src="images/clock.png"> Saturday and Sunday- 8am to 11pm</p>
+        </div>
+        <div class="footer-right">
+        <h1>Get In Touch</h1>
+          <p>#3 Itag,Biringan City, Samar <img src="images/pinpoint.png"></p>
+          <p>@GentlemansCut.com <img src="images/paperplane.png"></p>
+          <p>09785481555/09425658741 <img src="images/telephone.png"></p> 
+        </div>
+    </div>
+    
+<div class="social-links">
+    <a href="https://www.facebook.com/GentlemanBarberShopp" target="_blank">
+        <img src="images/fblogo.png" alt="Facebook Icon">
+    </a>
+    <a href="https://www.instagram.com/gentleman_barbershp" target="_blank">
+        <img src="images/insta.png" alt="Instagram Icon">
+    </a>
+    <a href="https://twitter.com/gentbarber" target="_blank">
+        <img src="images/twiiter-icon.png" alt="Twitter Icon">
+    </a>
+    <a href="https://www.youtube.com/@RegalGentleman" target="_blank">
+        <img src="images/youtubelogo.png" alt="YouTube Icon">
+    </a>
+    <p>Copyright 2024 Gentleman's Cut.</p>
+    <p>All rights reserved. Privacy Policy</p>
+    <p>To God to be Glory</p>
+</div>
+    
+</section>
+
+<!--AnimationOFSidebar-->    
+<script>
+    var menuBtn = document.getElementById("menuBtn")
+    var sideNav = document.getElementById("sideNav")
+    var menu = document.getElementById("menu")
+
+    sideNav.style.right = "-250px";
+
+    menuBtn.onclick = function(){
+        if(sideNav.style.right == "-250px"){
+            sideNav.style.right = "0";
+            menu.src = "images/close.png";
+        }
+        else{
+            sideNav.style.right = "-250px";
+            menu.src = "images/menu-icon.png";
+        }
+    }
+    var scroll = new SmoothScroll('a[href*="#"]', {
+	    speed: 1000,
+	    speedAsDuration: true });
+</script>
+
+</html>
